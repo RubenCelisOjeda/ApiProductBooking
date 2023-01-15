@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ApiSeguridad.DDD.Application\ApiSeguridad.DDD.Application.csproj" />
+    <ProjectReference Include="..\ApiSeguridad.DDD.Transversal\ApiSeguridad.DDD.Transversal.csproj" />
+  </ItemGroup>
+
 
 </Project>
