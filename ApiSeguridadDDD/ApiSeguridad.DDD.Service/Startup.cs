@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
 
 namespace ApiSeguridad.DDD.Service
 {
@@ -21,6 +23,15 @@ namespace ApiSeguridad.DDD.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+
+            //añadir nlog
+            services.AddLogging(l =>
+            {
+                l.SetMinimumLevel(LogLevel.Information);
+                l.AddNLog("Log/NLog.config");
+
+            });
 
             //add cors
             services.AddCors(options =>
