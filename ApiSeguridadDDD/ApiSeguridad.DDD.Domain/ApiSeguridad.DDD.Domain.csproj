@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="3.1 DomainEntities\" />
+    <Folder Include="3.2 DomainService\" />
+    <Folder Include="3.3 ContractRepository\" />
+  </ItemGroup>
+
 </Project>

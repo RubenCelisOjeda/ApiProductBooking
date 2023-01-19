@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="5.1 IoC\" />
+    <Folder Include="5.2 Common\" />
+    <Folder Include="5.3 Response\" />
+  </ItemGroup>
+
 </Project>

@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Infraestructure", "4.Infr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Tranversal", "5.Tranversal", "{518868CA-104D-4A3D-AAD9-F60FDA306786}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSeguridad.DDD.Service", "ApiSeguridad.DDD.Service\ApiSeguridad.DDD.Service.csproj", "{D9ED58C9-B1C1-451B-89A3-4BFE87C0E282}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Service", "ApiSeguridad.DDD.Service\ApiSeguridad.DDD.Service.csproj", "{D9ED58C9-B1C1-451B-89A3-4BFE87C0E282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSeguridad.DDD.Application", "ApiSeguridad.DDD.Application\ApiSeguridad.DDD.Application.csproj", "{77BF3797-D21D-4A1D-9628-54799108543F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Application", "ApiSeguridad.DDD.Application\ApiSeguridad.DDD.Application.csproj", "{77BF3797-D21D-4A1D-9628-54799108543F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSeguridad.DDD.Domain", "ApiSeguridad.DDD.Domain\ApiSeguridad.DDD.Domain.csproj", "{1D559E0C-FEF1-4A01-93D4-43E401A31F7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Domain", "ApiSeguridad.DDD.Domain\ApiSeguridad.DDD.Domain.csproj", "{1D559E0C-FEF1-4A01-93D4-43E401A31F7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSeguridad.DDD.Infraestructure", "ApiSeguridad.DDD.Infraestructure\ApiSeguridad.DDD.Infraestructure.csproj", "{C6D61B36-7FFC-40DD-885C-D45423947D46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Infraestructure", "ApiSeguridad.DDD.Infraestructure\ApiSeguridad.DDD.Infraestructure.csproj", "{C6D61B36-7FFC-40DD-885C-D45423947D46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSeguridad.DDD.Transversal", "ApiSeguridad.DDD.Transversal\ApiSeguridad.DDD.Transversal.csproj", "{06285C23-89E7-45A1-A15F-9F631F9A5C30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Transversal", "ApiSeguridad.DDD.Transversal\ApiSeguridad.DDD.Transversal.csproj", "{06285C23-89E7-45A1-A15F-9F631F9A5C30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

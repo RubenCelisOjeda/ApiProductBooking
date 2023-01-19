@@ -9,4 +9,9 @@
     <ProjectReference Include="..\ApiSeguridad.DDD.Transversal\ApiSeguridad.DDD.Transversal.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="2.1 ApplicationService\" />
+    <Folder Include="2.2 Dto\" />
+  </ItemGroup>
+
 </Project>
