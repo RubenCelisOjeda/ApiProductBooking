@@ -34,7 +34,26 @@ namespace ApiSeguridad.DDD.Service
 
 
                                   });
-            }); 
+            });
+
+            //add Swagger 
+            services.AddSwaggerGen(options =>
+            {
+                var groupName = "v1";
+
+                options.SwaggerDoc(groupName, new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = $"API Seguridad {groupName}",
+                    Version = groupName,
+                    Description = "API Seguridad",
+                    Contact = new Microsoft.OpenApi.Models.OpenApiContact
+                    {
+                        Name = "API Seguridad",
+                        Email = string.Empty,
+                        Url = new System.Uri("https://foo.com/"),
+                    }
+                });
+            });
 
         }
 
@@ -45,6 +64,12 @@ namespace ApiSeguridad.DDD.Service
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Seguridad V1");
+            });
 
             app.UseHttpsRedirection();
 
