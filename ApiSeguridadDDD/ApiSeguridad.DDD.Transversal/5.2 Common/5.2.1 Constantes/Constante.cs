@@ -15,5 +15,12 @@
             public const string WarningCode = "";
             public const string ErrorCode = "";
         }
+
+        public struct StatusCode
+        {
+            public const bool Success = true;
+            public const bool Warning = false;
+            public const bool Error = false;
+        }
     }
 }

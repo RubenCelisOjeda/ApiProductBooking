@@ -1,3 +1,4 @@
+using ApiSeguridad.DDD.Service.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +11,9 @@ namespace ApiSeguridad.DDD.Service
 {
     public class Startup
     {
-        private readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        #region [Properties]
+        private readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; 
+        #endregion
 
         public Startup(IConfiguration configuration)
         {
@@ -25,46 +28,53 @@ namespace ApiSeguridad.DDD.Service
             services.AddControllers();
 
 
-            //añadir nlog
+            #region [IoC]
+            IoCGeneral.AddRegistration(services);
+            #endregion
+
+            #region [Log]
             services.AddLogging(l =>
-            {
-                l.SetMinimumLevel(LogLevel.Information);
-                l.AddNLog("Log/NLog.config");
-
-            });
-
-            //add cors
-            services.AddCors(options =>
-            {
-                options.AddPolicy(MyAllowSpecificOrigins,
-                                  builder =>
-                                  {
-                                      builder.AllowAnyOrigin()
-                                             .AllowAnyHeader()
-                                             .AllowAnyMethod();
-
-
-                                  });
-            });
-
-            //add Swagger 
-            services.AddSwaggerGen(options =>
-            {
-                var groupName = "v1";
-
-                options.SwaggerDoc(groupName, new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = $"API Seguridad {groupName}",
-                    Version = groupName,
-                    Description = "API Seguridad",
-                    Contact = new Microsoft.OpenApi.Models.OpenApiContact
-                    {
-                        Name = "API Seguridad",
-                        Email = string.Empty,
-                        Url = new System.Uri("https://foo.com/"),
-                    }
+                    l.SetMinimumLevel(LogLevel.Information);
+                    l.AddNLog("Log/NLog.config");
+
                 });
-            });
+            #endregion
+
+            #region [Cors]
+            services.AddCors(options =>
+                {
+                    options.AddPolicy(MyAllowSpecificOrigins,
+                                      builder =>
+                                      {
+                                          builder.AllowAnyOrigin()
+                                                 .AllowAnyHeader()
+                                                 .AllowAnyMethod();
+
+
+                                      });
+                });
+            #endregion
+
+            #region [Swagger]
+            services.AddSwaggerGen(options =>
+                {
+                    var groupName = "v1";
+
+                    options.SwaggerDoc(groupName, new Microsoft.OpenApi.Models.OpenApiInfo
+                    {
+                        Title = $"API Seguridad {groupName}",
+                        Version = groupName,
+                        Description = "API Seguridad",
+                        Contact = new Microsoft.OpenApi.Models.OpenApiContact
+                        {
+                            Name = "API Seguridad",
+                            Email = string.Empty,
+                            Url = new System.Uri("https://foo.com/"),
+                        }
+                    });
+                }); 
+            #endregion
 
         }
 
