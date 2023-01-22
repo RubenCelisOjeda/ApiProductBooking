@@ -89,7 +89,7 @@ namespace ApiSeguridad.DDD.Service
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/AppApiSeguridad/swagger/v1/swagger.json", "API Seguridad V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Seguridad V1");
             });
 
             app.UseHttpsRedirection();
