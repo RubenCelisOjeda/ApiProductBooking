@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="2.2 Dto\" />
+    <Folder Include="2.2 Dto\Auth\" />
   </ItemGroup>
 
 </Project>
