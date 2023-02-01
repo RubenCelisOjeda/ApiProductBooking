@@ -30,6 +30,7 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
         {
             BaseResponse<AuthResponse> baseResponse = null;
             AuthResponse responseDataAuth = null;
+
             try
             {
                 responseDataAuth =  await _authDomain.AuthLoginWeb(pEntidad);

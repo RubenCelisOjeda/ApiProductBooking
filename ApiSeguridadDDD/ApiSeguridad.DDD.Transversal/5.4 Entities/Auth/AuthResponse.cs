@@ -16,21 +16,21 @@
         /// <summary>
         /// Id del usuario
         /// </summary>
-        public int Id { get; set; }
+        public int Id { get; }
 
         /// <summary>
         /// Nombre del usuario
         /// </summary>
-        public string UserName { get; set; }
+        public string UserName { get; }
 
         /// <summary>
         /// Email del usuario
         /// </summary>
-        public string Email { get; set; }
+        public string Email { get; }
 
         /// <summary>
         /// Token generado para el usario
         /// </summary>
-        public string Token { get; set; }
+        public string Token { get;}
     }
 }
