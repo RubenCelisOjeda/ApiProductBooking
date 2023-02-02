@@ -11,7 +11,7 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
     {
         #region [Properties]
         private readonly IAuthDomain _authDomain;
-        private readonly MetGlo<AuthResponse> oMetGlo = new MetGlo<AuthResponse>();
+        private readonly MetGlo<AuthResponse> _metGlo;
 
         #endregion
 
@@ -19,6 +19,7 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
         public AuthService(IAuthDomain authDomain)
         {
             _authDomain = authDomain;
+            _metGlo = new MetGlo<AuthResponse>();
         }
         #endregion
 
@@ -37,13 +38,13 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
             {
                 responseDataAuth =  await _authDomain.AuthLoginWeb(pEntidad);
                 if (responseDataAuth != null)
-                    baseResponse = oMetGlo.BaseResponseSuccess(responseDataAuth);
+                    baseResponse = _metGlo.BaseResponseSuccess(responseDataAuth);
                 else
-                    baseResponse = oMetGlo.BaseResponseWarning(responseDataAuth);
+                    baseResponse = _metGlo.BaseResponseWarning(responseDataAuth);
             }
             catch (Exception ex)
             {
-                baseResponse = oMetGlo.BaseResponseError(responseDataAuth, ex.Message);
+                baseResponse = _metGlo.BaseResponseError(responseDataAuth, ex.Message);
             }
             return baseResponse;
         } 
