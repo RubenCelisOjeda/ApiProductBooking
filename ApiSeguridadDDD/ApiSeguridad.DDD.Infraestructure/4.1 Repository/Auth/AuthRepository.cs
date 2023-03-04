@@ -32,8 +32,8 @@ namespace ApiSeguridad.DDD.Infraestructure._4._1_Repository
             using (var connection = _configuration.GetConnectionSeguridad)
             {
                 const string procedure = @"SELECT usu.Id,
-                                                 usu.UserName,
-                                                 usu.Email
+                                                  usu.UserName,
+                                                  usu.Email
 
                                            FROM Usuario usu
                                            WHERE usu.Email = @pEmail AND

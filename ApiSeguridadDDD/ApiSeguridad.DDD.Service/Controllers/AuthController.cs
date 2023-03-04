@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace ApiSeguridad.DDD.Service.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -18,6 +21,11 @@ namespace ApiSeguridad.DDD.Service.Controllers
         #endregion
 
         #region [Constructor]
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="authService"></param>
         public AuthController(ILogger<AuthController> logger, IAuthService authService)
         {
             _logger = logger;

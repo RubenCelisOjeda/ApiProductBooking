@@ -8,8 +8,16 @@ using ServicioAPISeguridad.Infraestructure.Interfaces;
 
 namespace ApiSeguridad.DDD.Service.IoC
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class IoCGeneral
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="service"></param>
+        /// <returns></returns>
         public static IServiceCollection AddRegistration(this IServiceCollection service)
         {
 

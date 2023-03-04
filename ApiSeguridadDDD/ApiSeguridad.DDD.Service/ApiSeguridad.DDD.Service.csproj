@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Git\API-Seguridad-DDD\ApiSeguridadDDD\ApiSeguridad.DDD.Service\ApiSeguridad.DDD.Service.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
