@@ -12,7 +12,6 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
         #region [Properties]
         private readonly IAuthDomain _authDomain;
         private readonly MetGlo<AuthResponse> _metGlo;
-
         #endregion
 
         #region [Constructor]
