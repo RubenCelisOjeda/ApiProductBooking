@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ApiSeguridad.DDD.Application\ApiSeguridad.DDD.Application.csproj" />
-    <ProjectReference Include="..\ApiSeguridad.DDD.Infraestructure\ApiSeguridad.DDD.Infraestructure.csproj" />
+    <ProjectReference Include="..\ApiSeguridad.DDD.Infraestructure\ApiSeguridad.DDD.Infraestructure.Dapper.csproj" />
     <ProjectReference Include="..\ApiSeguridad.DDD.Transversal\ApiSeguridad.DDD.Transversal.csproj" />
   </ItemGroup>
 

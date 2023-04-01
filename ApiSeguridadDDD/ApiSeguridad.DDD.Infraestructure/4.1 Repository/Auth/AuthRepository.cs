@@ -1,9 +1,12 @@
 ﻿using ApiSeguridad.DDD.Domain._3._3_ContractRepository.Auth;
 using ApiSeguridad.DDD.Transversal._5._4_Entities.Auth;
 using Dapper;
+using Dapper.Oracle;
+using Oracle.ManagedDataAccess.Client;
 using ServicioAPISeguridad.Infraestructure.Interfaces;
 using System.Data;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Threading.Tasks;
 
 namespace ApiSeguridad.DDD.Infraestructure._4._1_Repository
@@ -31,21 +34,27 @@ namespace ApiSeguridad.DDD.Infraestructure._4._1_Repository
         {
             using (var connection = _configuration.GetConnectionSeguridad)
             {
-                const string procedure = @"SELECT usu.Id,
-                                                  usu.UserName,
-                                                  usu.Email
+                #region [Query]
+                const string procedure = @"SELECT usu.Id AS ID,
+                                                  usu.UserName AS USERNAME,
+                                                  usu.Email AS EMAIL
 
                                            FROM Usuario usu
-                                           WHERE usu.Email = @pEmail AND
-                                                 usu.Password = @pPassword AND 
-                                                 usu.Status = 1";
+                                           WHERE usu.Email = @pEmail";
+                #endregion
 
-                var parameters = new DynamicParameters();
-                parameters.Add("@pEmail", pEntidad.Usuario, DbType.String);
-                parameters.Add("@pPassword", pEntidad.Password, DbType.String);
+                #region [Parameters]
+                var parameters = new DynamicParameters( new
+                {
+                    pEmail = pEntidad.Usuario,
+                    pPassword = pEntidad.Password,
+                });
+                #endregion
 
-                var response = await connection.QueryAsync<AuthResponse>(procedure, parameters, commandType: CommandType.Text);
-                return response.FirstOrDefault();
+                #region [Execute]
+                var response = await connection.QueryAsync<AuthResponse>(procedure, parameters,commandType: CommandType.Text);
+                return response.FirstOrDefault(); 
+                #endregion
             }
         } 
         #endregion
