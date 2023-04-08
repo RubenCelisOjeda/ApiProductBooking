@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ApiSeguridad.DDD.Domain\ApiSeguridad.DDD.Domain.csproj" />
-    <ProjectReference Include="..\ApiSeguridad.DDD.Transversal\ApiSeguridad.DDD.Transversal.csproj" />
+    <ProjectReference Include="..\ApiSeguridad.DDD.Domain\ApiProductBooking.DDD.Domain.csproj" />
+    <ProjectReference Include="..\ApiSeguridad.DDD.Transversal\ApiProductBooking.DDD.Transversal.csproj" />
   </ItemGroup>
 
   <ItemGroup>

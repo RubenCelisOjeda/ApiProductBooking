@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using ServicioAPISeguridad.Infraestructure.Configuration;
 using ServicioAPISeguridad.Infraestructure.Interfaces;
 
-namespace ApiSeguridad.DDD.Service.IoC
+namespace ApiProductBooking.DDD.Service.IoC
 {
     /// <summary>
     /// 
@@ -22,7 +22,7 @@ namespace ApiSeguridad.DDD.Service.IoC
         {
 
             #region [Connection]
-            service.AddSingleton<IConnectionFactory, ConnectionFactory>(); 
+            service.AddSingleton<IConnectionFactory, ConnectionFactory>();
             #endregion
 
             #region [Auth]

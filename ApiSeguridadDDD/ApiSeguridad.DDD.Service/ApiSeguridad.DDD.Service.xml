@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>ApiSeguridad.DDD.Service</name>
+        <name>ApiProductBooking.DDD.Service</name>
     </assembly>
     <members>
         <member name="T:ApiSeguridad.DDD.Service.Controllers.AuthController">
@@ -20,18 +20,6 @@
             <summary>
             Metodo de autenticacion.
             </summary>
-            <returns></returns>
-        </member>
-        <member name="T:ApiSeguridad.DDD.Service.IoC.IoCGeneral">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:ApiSeguridad.DDD.Service.IoC.IoCGeneral.AddRegistration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-            <summary>
-            
-            </summary>
-            <param name="service"></param>
             <returns></returns>
         </member>
         <member name="M:ApiSeguridad.DDD.Service.Program.Main(System.String[])">
@@ -64,6 +52,18 @@
             </summary>
             <param name="app"></param>
             <param name="env"></param>
+        </member>
+        <member name="T:ApiProductBooking.DDD.Service.IoC.IoCGeneral">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiProductBooking.DDD.Service.IoC.IoCGeneral.AddRegistration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

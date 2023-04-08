@@ -1,4 +1,4 @@
-using ApiSeguridad.DDD.Service.IoC;
+using ApiProductBooking.DDD.Service.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

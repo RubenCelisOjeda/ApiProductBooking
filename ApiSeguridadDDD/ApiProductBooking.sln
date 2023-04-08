@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Infraestructure", "4.Infr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Tranversal", "5.Tranversal", "{518868CA-104D-4A3D-AAD9-F60FDA306786}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Service", "ApiSeguridad.DDD.Service\ApiSeguridad.DDD.Service.csproj", "{D9ED58C9-B1C1-451B-89A3-4BFE87C0E282}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Service", "ApiSeguridad.DDD.Service\ApiProductBooking.DDD.Service.csproj", "{D9ED58C9-B1C1-451B-89A3-4BFE87C0E282}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Application", "ApiSeguridad.DDD.Application\ApiSeguridad.DDD.Application.csproj", "{77BF3797-D21D-4A1D-9628-54799108543F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Application", "ApiSeguridad.DDD.Application\ApiProductBooking.DDD.Application.csproj", "{77BF3797-D21D-4A1D-9628-54799108543F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Domain", "ApiSeguridad.DDD.Domain\ApiSeguridad.DDD.Domain.csproj", "{1D559E0C-FEF1-4A01-93D4-43E401A31F7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Domain", "ApiSeguridad.DDD.Domain\ApiProductBooking.DDD.Domain.csproj", "{1D559E0C-FEF1-4A01-93D4-43E401A31F7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Infraestructure.Dapper", "ApiSeguridad.DDD.Infraestructure\ApiSeguridad.DDD.Infraestructure.Dapper.csproj", "{C6D61B36-7FFC-40DD-885C-D45423947D46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Infraestructure.Dapper", "ApiSeguridad.DDD.Infraestructure\ApiProductBooking.DDD.Infraestructure.Dapper.csproj", "{C6D61B36-7FFC-40DD-885C-D45423947D46}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Transversal", "ApiSeguridad.DDD.Transversal\ApiSeguridad.DDD.Transversal.csproj", "{06285C23-89E7-45A1-A15F-9F631F9A5C30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Transversal", "ApiSeguridad.DDD.Transversal\ApiProductBooking.DDD.Transversal.csproj", "{06285C23-89E7-45A1-A15F-9F631F9A5C30}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{CB9658A1-950C-457F-8DFF-7271A6E70BAD}"
 EndProject
@@ -31,9 +31,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroORM", "MicroORM", "{0E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{285CC41B-3141-402C-9661-C770D78E6471}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Infraestructure.Api", "ApiSeguridad.DDD.Infraestructure.ApiSunat\ApiSeguridad.DDD.Infraestructure.Api.csproj", "{25C01371-3227-4F50-93C2-2802A7C55DA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Infraestructure.Api", "ApiSeguridad.DDD.Infraestructure.ApiSunat\ApiProductBooking.DDD.Infraestructure.Api.csproj", "{25C01371-3227-4F50-93C2-2802A7C55DA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSeguridad.DDD.Infraestructure.EntityFrameworkCore", "ApiSeguridad.DDD.Infraestructure.EntityFrameworkCore\ApiSeguridad.DDD.Infraestructure.EntityFrameworkCore.csproj", "{A44BCCD2-F6E7-4404-9E3C-5737C40E84BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Infraestructure.EntityFrameworkCore", "ApiSeguridad.DDD.Infraestructure.EntityFrameworkCore\ApiProductBooking.DDD.Infraestructure.EntityFrameworkCore.csproj", "{A44BCCD2-F6E7-4404-9E3C-5737C40E84BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
