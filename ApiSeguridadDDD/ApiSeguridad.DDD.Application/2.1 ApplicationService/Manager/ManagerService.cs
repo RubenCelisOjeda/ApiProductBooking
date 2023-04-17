@@ -1,5 +1,4 @@
 ﻿using ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager;
-using ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request;
 using ApiSeguridad.DDD.Transversal._5._2_Common._5._2._2_Methods;
 using ApiSeguridad.DDD.Transversal._5._3_Response;
 using System;
