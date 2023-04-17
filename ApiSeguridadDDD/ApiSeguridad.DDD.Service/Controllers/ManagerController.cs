@@ -1,4 +1,5 @@
-﻿using ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth;
+﻿using ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request;
+using ApiSeguridad.DDD.Service.Controllers;
 using ApiSeguridad.DDD.Transversal._5._3_Response;
 using ApiSeguridad.DDD.Transversal._5._4_Entities.Auth;
 using Microsoft.AspNetCore.Mvc;
@@ -6,56 +7,51 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace ApiSeguridad.DDD.Service.Controllers
+namespace ApiProductBooking.DDD.Service.Controllers
 {
     /// <summary>
-    /// 
+    /// Api ManagerController
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class ManagerController : ControllerBase
     {
         #region [Properties]
         private readonly ILogger<AuthController> _logger;
-        private readonly IAuthService _authService;
         #endregion
 
         #region [Constructor]
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="logger"></param>
-        /// <param name="authService"></param>
-        public AuthController(ILogger<AuthController> logger, IAuthService authService)
+        public ManagerController(ILogger<AuthController> logger)
         {
             _logger = logger;
-            _authService = authService;
         }
         #endregion
 
         #region [Apis]
         /// <summary>
-        /// Metodo de autenticacion.
+        /// Metodo que valida si extiste el email.
         /// </summary>
+        /// <param name="pEntidad"></param>
         /// <returns></returns>
-        [HttpPost]
-        [Route("AuthLoginWeb")]
-        public async Task<IActionResult> AuthLoginWeb([FromBody] AuthRequest pEntidad)
+        [HttpGet]
+        [Route("ExistsEmail")]
+        public async Task<IActionResult> ExistsEmail([FromBody] ExistsEmailRequest pEntidad)
         {
             BaseResponse<AuthResponse> responseData = null;
 
             try
             {
-                responseData = await _authService.AuthLoginWeb(pEntidad);
+                //responseData = await _authService.AuthLoginWeb(pEntidad);
                 _logger.LogInformation(responseData.Message);
-                return Ok(responseData);
+                return Ok("");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
                 return BadRequest(responseData);
             }
-        } 
+        }
         #endregion
+
     }
 }

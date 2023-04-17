@@ -5,5 +5,6 @@ namespace ServicioAPISeguridad.Infraestructure.Interfaces
     public interface IConnectionFactory
     {
         IDbConnection GetConnectionSeguridad { get; }
+        IDbConnection GetConnectionPideloPues { get; }
     }
 }

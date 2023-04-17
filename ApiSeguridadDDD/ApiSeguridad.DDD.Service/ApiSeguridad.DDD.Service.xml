@@ -53,6 +53,18 @@
             <param name="app"></param>
             <param name="env"></param>
         </member>
+        <member name="T:ApiProductBooking.DDD.Service.Controllers.ManagerController">
+            <summary>
+            Api ManagerController
+            </summary>
+        </member>
+        <member name="M:ApiProductBooking.DDD.Service.Controllers.ManagerController.ExistsEmail(ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request.ExistsEmailRequest)">
+            <summary>
+            Metodo que valida si extiste el email.
+            </summary>
+            <param name="pEntidad"></param>
+            <returns></returns>
+        </member>
         <member name="T:ApiProductBooking.DDD.Service.IoC.IoCGeneral">
             <summary>
             

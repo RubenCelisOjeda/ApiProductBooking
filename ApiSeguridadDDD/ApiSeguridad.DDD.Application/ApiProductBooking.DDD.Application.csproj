@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ApiSeguridad.DDD.Domain\ApiProductBooking.DDD.Domain.csproj" />
+    <ProjectReference Include="..\ApiSeguridad.DDD.Infraestructure\ApiProductBooking.DDD.Infraestructure.Dapper.csproj" />
     <ProjectReference Include="..\ApiSeguridad.DDD.Transversal\ApiProductBooking.DDD.Transversal.csproj" />
   </ItemGroup>
 

@@ -13,7 +13,9 @@ namespace ServicioAPISeguridad.Infraestructure.Configuration
         #region [Properties]
         private readonly IConfiguration _configuration;
         private readonly ILogger<ConnectionFactory> _logger;
-        private const string ConnectionString = "DataBaseConnection:SQLServer:BDSeguridad";
+
+        private const string ConnectionStringSeguridad = "DataBaseConnection:SQLServer:BDSeguridad";
+        private const string ConnectionStringPideloPues = "DataBaseConnection:SQLServer:BDPideloPues";
         #endregion
 
         #region [Constructor]
@@ -27,12 +29,17 @@ namespace ServicioAPISeguridad.Infraestructure.Configuration
         #region [Properties]
         public IDbConnection GetConnectionSeguridad
         {
-            get { return GetConnectionSQLServer(_configuration.GetSection(ConnectionString).Value); }
-        } 
+            get { return DBPideloPuesSQLServer(_configuration.GetSection(ConnectionStringSeguridad).Value); }
+        }
+
+        public IDbConnection GetConnectionPideloPues
+        {
+            get { return DBPideloPuesSQLServer(_configuration.GetSection(ConnectionStringPideloPues).Value); }
+        }
         #endregion
 
         #region [Methods]
-        public IDbConnection GetConnectionSQLServer(string pDataBase)
+        public IDbConnection DBPideloPuesSQLServer(string pDataBase)
         {
             var connection = new SqlConnection();
 
@@ -50,7 +57,7 @@ namespace ServicioAPISeguridad.Infraestructure.Configuration
             return connection;
         }
 
-        public IDbConnection GetConnectionOracleDeveloper(string pDataBase)
+        public IDbConnection DBConnectionOracleDeveloper(string pDataBase)
         {
             var connection = new OracleConnection();
 

@@ -5,6 +5,7 @@
     /// </summary>
     public class AuthResponse
     {
+        #region [Constructor]
         /// <summary>
         /// Constructor vacio
         /// </summary>
@@ -12,7 +13,9 @@
         {
 
         }
+        #endregion
 
+        #region [Attributes]
         /// <summary>
         /// Id del usuario
         /// </summary>
@@ -31,6 +34,7 @@
         /// <summary>
         /// Token generado para el usario
         /// </summary>
-        public string Token { get;}
+        public string Token { get; } 
+        #endregion
     }
 }
