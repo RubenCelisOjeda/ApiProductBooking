@@ -58,7 +58,7 @@
             Api ManagerController
             </summary>
         </member>
-        <member name="M:ApiProductBooking.DDD.Service.Controllers.ManagerController.ExistsEmail(ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request.ExistsEmailRequest)">
+        <member name="M:ApiProductBooking.DDD.Service.Controllers.ManagerController.ExistsEmail(System.String)">
             <summary>
             Metodo que valida si extiste el email.
             </summary>

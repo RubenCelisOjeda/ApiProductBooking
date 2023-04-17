@@ -1,7 +1,7 @@
-﻿using ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request;
+﻿using ApiProductBooking.DDD.Application._2._1_ApplicationService.Manager;
+using ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request;
 using ApiSeguridad.DDD.Service.Controllers;
 using ApiSeguridad.DDD.Transversal._5._3_Response;
-using ApiSeguridad.DDD.Transversal._5._4_Entities.Auth;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,12 +18,14 @@ namespace ApiProductBooking.DDD.Service.Controllers
     {
         #region [Properties]
         private readonly ILogger<AuthController> _logger;
+        private readonly IManagerService _managerService;
         #endregion
 
         #region [Constructor]
-        public ManagerController(ILogger<AuthController> logger)
+        public ManagerController(ILogger<AuthController> logger, IManagerService managerService)
         {
             _logger = logger;
+            _managerService = managerService;
         }
         #endregion
 
@@ -35,15 +37,15 @@ namespace ApiProductBooking.DDD.Service.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("ExistsEmail")]
-        public async Task<IActionResult> ExistsEmail([FromBody] ExistsEmailRequest pEntidad)
+        public async Task<IActionResult> ExistsEmail(string email)
         {
-            BaseResponse<AuthResponse> responseData = null;
+            BaseResponse<bool> responseData = null;
 
             try
             {
-                //responseData = await _authService.AuthLoginWeb(pEntidad);
+                responseData = await _managerService.ExistsEmail(email);
                 _logger.LogInformation(responseData.Message);
-                return Ok("");
+                return Ok(responseData);
             }
             catch (Exception ex)
             {

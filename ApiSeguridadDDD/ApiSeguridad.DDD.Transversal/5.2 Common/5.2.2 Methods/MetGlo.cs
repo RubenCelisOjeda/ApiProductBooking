@@ -22,8 +22,8 @@ namespace ApiSeguridad.DDD.Transversal._5._2_Common._5._2._2_Methods
         {
             BaseResponse<T> baseResponse = new BaseResponse<T>()
             {
-                CodigoError = Constante.ResponseCode.SuccessCode,
-                Message = Constante.ResponseMessage.SuccessMessage + " - " + pError,
+                CodigoError = Constante.ResponseCode.ErrorCode,
+                Message = Constante.ResponseMessage.ErrorMessage + " - " + pError,
                 IsSuccess = Constante.StatusCode.Warning,
                 Data = pData
             };
@@ -34,8 +34,8 @@ namespace ApiSeguridad.DDD.Transversal._5._2_Common._5._2._2_Methods
         {
             BaseResponse<T> baseResponse = new BaseResponse<T>()
             {
-                CodigoError = Constante.ResponseCode.SuccessCode,
-                Message = Constante.ResponseMessage.SuccessMessage,
+                CodigoError = Constante.ResponseCode.WarningCode,
+                Message = Constante.ResponseMessage.WarningMessage,
                 IsSuccess = Constante.StatusCode.Warning,
                 Data = pData
             };

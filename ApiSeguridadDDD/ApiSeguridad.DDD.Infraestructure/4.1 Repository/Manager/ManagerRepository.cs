@@ -1,5 +1,4 @@
-﻿using ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request;
-using Dapper;
+﻿using Dapper;
 using ServicioAPISeguridad.Infraestructure.Interfaces;
 using System.Data;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager
 {
-    public class ManagerRepository
+    public class ManagerRepository : IManagerRepository
     {
         #region [Propertys]
         private readonly IConnectionFactory _configuration;
@@ -26,7 +25,7 @@ namespace ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager
         /// </summary>
         /// <param name="pEntidad">Parametros de tipo dentodad</param>
         /// <returns>Datos del usuario</returns>
-        public async Task<bool> ExistsEmail(ExistsEmailRequest pEntidad)
+        public async Task<bool> ExistsEmail(string email)
         {
             using (var connection = _configuration.GetConnectionPideloPues)
             {
@@ -42,7 +41,7 @@ namespace ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager
                 #region [Parameters]
                 var parameters = new DynamicParameters(new
                 {
-                    pEmail = pEntidad.Email
+                    pEmail = email
                 });
                 #endregion
 

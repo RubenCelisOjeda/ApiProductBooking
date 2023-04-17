@@ -1,5 +1,4 @@
-﻿using ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager
 {
@@ -10,6 +9,6 @@ namespace ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager
         /// </summary>
         /// <param name="pEntidad">Parametros de tipo dentodad</param>
         /// <returns>Datos del usuario</returns>
-        public Task<bool> ExistsEmail(ExistsEmailRequest pEntidad);
+        public Task<bool> ExistsEmail(string email);
     }
 }
