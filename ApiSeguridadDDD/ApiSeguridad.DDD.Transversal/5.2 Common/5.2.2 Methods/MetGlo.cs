@@ -3,12 +3,12 @@ using ApiSeguridad.DDD.Transversal._5._3_Response;
 
 namespace ApiSeguridad.DDD.Transversal._5._2_Common._5._2._2_Methods
 {
-    public class MetGlo<T>
+    public class MetGlo
     {
         #region [BaseResponse]
-        public BaseResponse<T> BaseResponseSuccess(T pData)
+        public BaseResponse<object> BaseResponseSuccess(object pData)
         {
-            BaseResponse<T> baseResponse = new BaseResponse<T>()
+            var baseResponse = new BaseResponse<object>()
             {
                 CodigoError = Constante.ResponseCode.SuccessCode,
                 Message = Constante.ResponseMessage.SuccessMessage,
@@ -18,9 +18,9 @@ namespace ApiSeguridad.DDD.Transversal._5._2_Common._5._2._2_Methods
             return baseResponse;
         }
 
-        public BaseResponse<T> BaseResponseError(T pData, string pError = "")
+        public BaseResponse<object> BaseResponseError(object pData, string pError = "")
         {
-            BaseResponse<T> baseResponse = new BaseResponse<T>()
+            var baseResponse = new BaseResponse<object>()
             {
                 CodigoError = Constante.ResponseCode.ErrorCode,
                 Message = Constante.ResponseMessage.ErrorMessage + " - " + pError,
@@ -30,9 +30,9 @@ namespace ApiSeguridad.DDD.Transversal._5._2_Common._5._2._2_Methods
             return baseResponse;
         }
 
-        public BaseResponse<T> BaseResponseWarning(T pData)
+        public BaseResponse<object> BaseResponseWarning(object pData)
         {
-            BaseResponse<T> baseResponse = new BaseResponse<T>()
+            var baseResponse = new BaseResponse<object>()
             {
                 CodigoError = Constante.ResponseCode.WarningCode,
                 Message = Constante.ResponseMessage.WarningMessage,

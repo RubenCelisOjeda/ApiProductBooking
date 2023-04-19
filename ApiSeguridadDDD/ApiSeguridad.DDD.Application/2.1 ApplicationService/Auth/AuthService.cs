@@ -11,14 +11,14 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
     {
         #region [Properties]
         private readonly IAuthDomain _authDomain;
-        private readonly MetGlo<AuthResponse> _metGlo;
+        private readonly MetGlo _metGlo;
         #endregion
 
         #region [Constructor]
         public AuthService(IAuthDomain authDomain)
         {
             _authDomain = authDomain;
-            _metGlo = new MetGlo<AuthResponse>();
+            _metGlo = new MetGlo();
         }
         #endregion
 
@@ -28,9 +28,9 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
         /// </summary>
         /// <param name="pEntidad">Parametros de tipo dentodad</param>
         /// <returns>Datos del usuario</returns>
-        public async Task<BaseResponse<AuthResponse>> AuthLoginWeb(AuthRequest pEntidad)
+        public async Task<BaseResponse<object>> AuthLoginWeb(AuthRequest pEntidad)
         {
-            BaseResponse<AuthResponse> baseResponse = null;
+            BaseResponse<object> baseResponse = null;
             AuthResponse responseDataAuth = null;
 
             try

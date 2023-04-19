@@ -9,6 +9,6 @@ namespace ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager
         /// </summary>
         /// <param name="pEntidad">Parametros de tipo dentodad</param>
         /// <returns>Datos del usuario</returns>
-        public Task<bool> ExistsEmail(string email);
+        public Task<int> ExistsEmail(string email);
     }
 }

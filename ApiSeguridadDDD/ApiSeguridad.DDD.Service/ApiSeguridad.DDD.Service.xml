@@ -62,7 +62,7 @@
             <summary>
             Metodo que valida si extiste el email.
             </summary>
-            <param name="pEntidad"></param>
+            <param name="email"></param>
             <returns></returns>
         </member>
         <member name="T:ApiProductBooking.DDD.Service.IoC.IoCGeneral">

@@ -10,6 +10,6 @@ namespace ApiProductBooking.DDD.Application._2._1_ApplicationService.Manager
         /// </summary>
         /// <param name="pEntidad"></param>
         /// <returns></returns>
-        public Task<BaseResponse<bool>> ExistsEmail(string email);
+        public Task<BaseResponse<object>> ExistsEmail(string email);
     }
 }

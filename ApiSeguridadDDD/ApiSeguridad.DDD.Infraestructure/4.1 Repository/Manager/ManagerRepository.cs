@@ -25,17 +25,14 @@ namespace ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager
         /// </summary>
         /// <param name="pEntidad">Parametros de tipo dentodad</param>
         /// <returns>Datos del usuario</returns>
-        public async Task<bool> ExistsEmail(string email)
+        public async Task<int> ExistsEmail(string email)
         {
             using (var connection = _configuration.GetConnectionPideloPues)
             {
                 #region [Query]
-                const string query = @"SELECT usu.Id AS ID,
-                                                  usu.UserName AS USERNAME,
-                                                  usu.Email AS EMAIL
-
-                                        FROM Usuario usu
-                                        WHERE usu.Email = @pEmail";
+                const string query = @"SELECT COUNT(1)
+                                       FROM dbo.[User] u
+                                       WHERE u.Email = @pEmail";
                 #endregion
 
                 #region [Parameters]
@@ -46,7 +43,7 @@ namespace ApiProductBooking.DDD.Infraestructure.Dapper._4._1_Repository.Manager
                 #endregion
 
                 #region [Execute]
-                var response = await connection.QueryAsync<bool>(query, parameters, commandType: CommandType.Text);
+                var response = await connection.QueryAsync<int>(query, parameters, commandType: CommandType.Text);
                 return response.FirstOrDefault();
                 #endregion
             }

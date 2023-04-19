@@ -42,7 +42,7 @@ namespace ApiSeguridad.DDD.Service.Controllers
         [Route("AuthLoginWeb")]
         public async Task<IActionResult> AuthLoginWeb([FromBody] AuthRequest pEntidad)
         {
-            BaseResponse<AuthResponse> responseData = null;
+            BaseResponse<object> responseData = null;
 
             try
             {

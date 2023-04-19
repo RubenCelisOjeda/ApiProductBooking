@@ -11,6 +11,6 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
         /// </summary>
         /// <param name="pEntidad">Parametros de tipo dentodad</param>
         /// <returns>Datos del usuario</returns>
-        public Task<BaseResponse<AuthResponse>> AuthLoginWeb(AuthRequest pEntidad);
+        public Task<BaseResponse<object>> AuthLoginWeb(AuthRequest pEntidad);
     }
 }

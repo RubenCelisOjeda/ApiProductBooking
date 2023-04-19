@@ -1,5 +1,4 @@
 ﻿using ApiProductBooking.DDD.Application._2._1_ApplicationService.Manager;
-using ApiProductBooking.DDD.Transversal._5._4_Entities.Manager.Request;
 using ApiSeguridad.DDD.Service.Controllers;
 using ApiSeguridad.DDD.Transversal._5._3_Response;
 using Microsoft.AspNetCore.Mvc;
@@ -33,13 +32,13 @@ namespace ApiProductBooking.DDD.Service.Controllers
         /// <summary>
         /// Metodo que valida si extiste el email.
         /// </summary>
-        /// <param name="pEntidad"></param>
+        /// <param name="email"></param>
         /// <returns></returns>
         [HttpGet]
         [Route("ExistsEmail")]
         public async Task<IActionResult> ExistsEmail(string email)
         {
-            BaseResponse<bool> responseData = null;
+            BaseResponse<object> responseData = null;
 
             try
             {

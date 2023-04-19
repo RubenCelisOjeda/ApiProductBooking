@@ -9,7 +9,7 @@ namespace ApiProductBooking.DDD.Application._2._1_ApplicationService.Manager
     public class ManagerService : IManagerService
     {
         #region [Properties]
-        private readonly MetGlo<bool> _metGlo;
+        private readonly MetGlo _metGlo;
         private readonly IManagerRepository _managerRepository;
         #endregion
 
@@ -17,21 +17,21 @@ namespace ApiProductBooking.DDD.Application._2._1_ApplicationService.Manager
         public ManagerService(IManagerRepository managerRepository)
         {
             _managerRepository = managerRepository;
-            _metGlo = new MetGlo<bool>();
+            _metGlo = new MetGlo();
         }
         #endregion
 
 
         #region [Methods]
-        public async Task<BaseResponse<bool>> ExistsEmail(string email)
+        public async Task<BaseResponse<object>> ExistsEmail(string email)
         {
-            BaseResponse<bool> baseResponse = null;
-            bool responseDataAuth = false;
+            BaseResponse<object> baseResponse = null;
+            int responseDataAuth = 0;
 
             try
             {
                 responseDataAuth = await _managerRepository.ExistsEmail(email);
-                if (responseDataAuth)
+                if (responseDataAuth == 1)
                     baseResponse = _metGlo.BaseResponseSuccess(responseDataAuth);
                 else
                     baseResponse = _metGlo.BaseResponseWarning(responseDataAuth);
