@@ -43,7 +43,7 @@ namespace ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth
             }
             catch (Exception ex)
             {
-                baseResponse = _metGlo.BaseResponseError(responseDataAuth, ex.Message);
+                baseResponse = _metGlo.BaseResponseError(ex.Message);
             }
             return baseResponse;
         } 

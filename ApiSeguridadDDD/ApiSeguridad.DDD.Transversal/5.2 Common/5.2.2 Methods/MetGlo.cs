@@ -12,30 +12,30 @@ namespace ApiSeguridad.DDD.Transversal._5._2_Common._5._2._2_Methods
             {
                 CodigoError = Constante.ResponseCode.SuccessCode,
                 Message = Constante.ResponseMessage.SuccessMessage,
-                IsSuccess = Constante.StatusCode.Warning,
+                IsSuccess = Constante.StatusCode.Success,
                 Data = pData
             };
             return baseResponse;
         }
 
-        public BaseResponse<object> BaseResponseError(object pData, string pError = "")
+        public BaseResponse<object> BaseResponseError(string pError = "")
         {
             var baseResponse = new BaseResponse<object>()
             {
                 CodigoError = Constante.ResponseCode.ErrorCode,
-                Message = Constante.ResponseMessage.ErrorMessage + " - " + pError,
-                IsSuccess = Constante.StatusCode.Warning,
-                Data = pData
+                Message = Constante.ResponseMessage.ErrorMessage,
+                IsSuccess = Constante.StatusCode.Error,
+                Data = null
             };
             return baseResponse;
         }
 
-        public BaseResponse<object> BaseResponseWarning(object pData)
+        public BaseResponse<object> BaseResponseWarning(object pData,string message = "")
         {
             var baseResponse = new BaseResponse<object>()
             {
                 CodigoError = Constante.ResponseCode.WarningCode,
-                Message = Constante.ResponseMessage.WarningMessage,
+                Message = (message == "" ? Constante.ResponseMessage.WarningMessage : message),
                 IsSuccess = Constante.StatusCode.Warning,
                 Data = pData
             };

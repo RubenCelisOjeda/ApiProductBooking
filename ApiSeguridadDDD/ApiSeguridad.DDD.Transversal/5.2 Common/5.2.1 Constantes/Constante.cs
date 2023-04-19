@@ -4,16 +4,16 @@
     {
         public struct ResponseMessage
         {
-            public const string SuccessMessage = "";
-            public const string WarningMessage = "";
-            public const string ErrorMessage = "";
+            public const string SuccessMessage = "Se ejecuto correctamente.";
+            public const string WarningMessage = "No se pudo ejecutar la consulta.";
+            public const string ErrorMessage = "Error al ejecutar la consulta.";
         }
 
         public struct ResponseCode
         {
-            public const string SuccessCode = "";
-            public const string WarningCode = "";
-            public const string ErrorCode = "";
+            public const string SuccessCode = "0";
+            public const string WarningCode = "1";
+            public const string ErrorCode = "2";
         }
 
         public struct StatusCode

@@ -1,9 +1,5 @@
 ﻿using ApiProductBooking.DDD.Application._2._1_ApplicationService.Manager;
-using ApiSeguridad.DDD.Service.Controllers;
-using ApiSeguridad.DDD.Transversal._5._3_Response;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
 using System.Threading.Tasks;
 
 namespace ApiProductBooking.DDD.Service.Controllers
@@ -16,14 +12,12 @@ namespace ApiProductBooking.DDD.Service.Controllers
     public class ManagerController : ControllerBase
     {
         #region [Properties]
-        private readonly ILogger<AuthController> _logger;
         private readonly IManagerService _managerService;
         #endregion
 
         #region [Constructor]
-        public ManagerController(ILogger<AuthController> logger, IManagerService managerService)
+        public ManagerController(IManagerService managerService)
         {
-            _logger = logger;
             _managerService = managerService;
         }
         #endregion
@@ -38,19 +32,8 @@ namespace ApiProductBooking.DDD.Service.Controllers
         [Route("ExistsEmail")]
         public async Task<IActionResult> ExistsEmail(string email)
         {
-            BaseResponse<object> responseData = null;
-
-            try
-            {
-                responseData = await _managerService.ExistsEmail(email);
-                _logger.LogInformation(responseData.Message);
-                return Ok(responseData);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message);
-                return BadRequest(responseData);
-            }
+            var responseData = await _managerService.ExistsEmail(email);
+            return Ok(responseData);
         }
         #endregion
 
