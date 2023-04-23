@@ -4,7 +4,7 @@
     /// Clase de tipo Response
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class BaseResponse<T> where T : class
+    public class BaseResponse<T>
     {
         /// <summary>
         /// Codigo de error

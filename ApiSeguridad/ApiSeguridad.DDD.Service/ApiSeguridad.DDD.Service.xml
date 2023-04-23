@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiProductBooking.DDD.Service</name>
+    </assembly>
+    <members>
+        <member name="T:ApiSeguridad.DDD.Service.Controllers.AuthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiSeguridad.DDD.Service.Controllers.AuthController.#ctor(Microsoft.Extensions.Logging.ILogger{ApiSeguridad.DDD.Service.Controllers.AuthController},ApiSeguridad.DDD.Application._2._1_ApplicationService.Auth.IAuthService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="authService"></param>
+        </member>
+        <member name="M:ApiSeguridad.DDD.Service.Controllers.AuthController.AuthLoginWeb(ApiSeguridad.DDD.Transversal._5._4_Entities.Auth.AuthRequest)">
+            <summary>
+            Metodo de autenticacion.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiSeguridad.DDD.Service.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:ApiSeguridad.DDD.Service.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiSeguridad.DDD.Service.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiSeguridad.DDD.Service.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:ApiSeguridad.DDD.Service.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:ApiProductBooking.DDD.Service.Controllers.ManagerController">
+            <summary>
+            Api ManagerController
+            </summary>
+        </member>
+        <member name="M:ApiProductBooking.DDD.Service.Controllers.ManagerController.ExistsEmail(System.String)">
+            <summary>
+            Metodo que valida si extiste el email.
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiProductBooking.DDD.Service.IoC.IoCGeneral">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiProductBooking.DDD.Service.IoC.IoCGeneral.AddRegistration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="service"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

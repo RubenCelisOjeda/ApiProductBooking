@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Infra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProductBooking.DDD.Infraestructure.EntityFrameworkCore", "ApiSeguridad.DDD.Infraestructure.EntityFrameworkCore\ApiProductBooking.DDD.Infraestructure.EntityFrameworkCore.csproj", "{A44BCCD2-F6E7-4404-9E3C-5737C40E84BB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Product Booking Windows Service", "6.Product Booking Windows Service", "{B51EBBF3-7A89-4165-8454-58B9963638B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

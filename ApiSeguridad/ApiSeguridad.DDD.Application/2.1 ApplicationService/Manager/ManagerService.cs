@@ -10,8 +10,7 @@ namespace ApiProductBooking.DDD.Application._2._1_ApplicationService.Manager
     public class ManagerService : IManagerService
     {
         #region [Properties]
-        private readonly ILogger<ManagerService> _logger;
-        private readonly MetGlo _metGlo;
+        private static ILogger<ManagerService> _logger;
         private readonly IManagerRepository _managerRepository;
         #endregion
 
@@ -20,31 +19,30 @@ namespace ApiProductBooking.DDD.Application._2._1_ApplicationService.Manager
         {
             _logger = logger;
             _managerRepository = managerRepository;
-            _metGlo = new MetGlo();
         }
         #endregion
 
-
         #region [Methods]
-        public async Task<BaseResponse<object>> ExistsEmail(string email)
+        public async Task<BaseResponse<bool>> ExistsEmail(string email)
         {
-            BaseResponse<object> baseResponse = null;
-            int responseService = 0;
+            BaseResponse<bool> baseResponse = null;
+            bool responseService = false;
+            
 
             try
             {
                 responseService = await _managerRepository.ExistsEmail(email);
-                if (responseService == 1)
-                    baseResponse = _metGlo.BaseResponseSuccess(responseService);
+                if (responseService)
+                    baseResponse = MetGlo<bool>.BaseResponseSuccess(responseService);
                 else
-                    baseResponse = _metGlo.BaseResponseWarning(responseService,"El correo ingresado es inválido y/o es correcto.");
+                    baseResponse = MetGlo<bool>.BaseResponseWarning(responseService, "El correo ingresado es inválido y/o es correcto.");
 
                 _logger.LogInformation(baseResponse.Message, baseResponse);
-
+                
             }
             catch (Exception ex)
             {
-                baseResponse = _metGlo.BaseResponseError(ex.Message);
+                baseResponse = MetGlo<bool>.BaseResponseError(ex.Message);
                 _logger.LogError(ex.Message, baseResponse);
             }
             return baseResponse;
